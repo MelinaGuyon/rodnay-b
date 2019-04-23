@@ -10,7 +10,11 @@ class SliderItem extends React.Component {
   render () {
     return (
       <div className='slider-item'>
-        <div className='title'>{this.props.item.title}</div>
+        <div className='container'>
+          <div className='title'>{this.props.item.title}</div>
+          <img className='img' src={this.props.item.url} alt=""/>
+          <div className='text'>{this.props.item.text}</div>
+        </div>
       </div>
     )
   }

@@ -20,32 +20,32 @@
 		"slider": [
 			{
 				"title": "1993",
-				"url": "",
+				"url": "./images/home/01.jpg",
 				"text": "My Dad brought home the first Machintosh Classic II.",
 				"position": "left"
 			},
 			{
 				"title": "1996",
-				"url": "",
+				"url": "./images/home/02.jpg",
 				"text": "The \"1984\" frist Apple commercial caught my eye.",
 				"position": "middle"
 			},
 			{
 				"title": "2001",
-				"url": "",
+				"url": "./images/home/03.jpg",
 				"text": "Finaly I can dance in the street thanks to the frist Ipod generation.",
 				"position": "right"
 			},
 			{
 				"title": "2009",
 				"subtitle": "Onwards",
-				"url": "",
+				"url": "./images/home/01.jpg",
 				"text": "I've become a designer surronunded by the full Apple Family, from the iMac to the HomePod among others",
 				"position": "end1"
 			},
 			{
 				"title": "Next ?",
-				"url": "",
+				"url": "./images/home/01.jpg",
 				"text": "See you soon",
 				"position": "end2"
 			}
