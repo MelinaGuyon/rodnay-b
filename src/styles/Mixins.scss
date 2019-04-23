@@ -11,18 +11,18 @@
   }
 }
 
-@mixin minHeight() {
-  @include mq($max-height: 1000px) {
+@mixin tablet() {
+  .tablet & {
     @content;
   }
 }
 
-@mixin smallDesktop() {
-  @include mq($max-width: 1250px) {
+@mixin mobile() {
+  @include mq($max-width: 950px) {
     @content;
   }
 
-  @include mq($max-height: 800px) {
+  .mobile & {
     @content;
   }
 }

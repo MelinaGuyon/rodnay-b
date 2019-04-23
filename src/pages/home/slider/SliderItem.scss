@@ -1,0 +1,12 @@
+.slider-item {
+  width: 100vw;
+
+  .title {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    font-size: 30px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -3,6 +3,7 @@ import Modules from 'modules';
 import Router from 'abstract/router/Router';
 import PageManager from 'abstract/Page/PageManager';
 import PreLoader from 'abstract/PreLoader/PreLoader';
+import Intro from 'components/intro/Intro';
 
 require('./App.scss');
 
@@ -91,12 +92,15 @@ class App extends React.Component {
   }
 
   render () {
-    return <div className='app' ref='app'>
-      <div className='pages'>
-        <PageManager ref='p0'/>
-        <PageManager ref='p1'/>
-      </div>
-    </div>;
+    return [
+      <Intro key='intro'/>,
+      <div className='app' ref='app' key='pages'>
+        <div className='pages'>
+          <PageManager ref='p0'/>
+          <PageManager ref='p1'/>
+        </div>
+      </div>,
+    ];
   }
 }
 

@@ -1,19 +1,4 @@
-# totopack
-
-<br>
-
-### Webpack React starter
-
-<br>
-
-## Global installation
-
-```sh
-cd totopack
-npm install
-```
-
-<br>
+# Rodney website
 
 ## Docs
 

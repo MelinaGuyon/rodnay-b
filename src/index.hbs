@@ -3,9 +3,12 @@
   <head>
     <meta charset="utf-8">
     <base href="<%= htmlWebpackPlugin.options.window['path'] %>">
-    <title></title>
+    <title>Rodney Paul | MyStory</title>
 
-    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0">
+    <meta name="title" content="Rodney Paul">
+    <meta name="description" content="MyStory">
+
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <% for (var css in htmlWebpackPlugin.files.css) { %>
       <link href="<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">

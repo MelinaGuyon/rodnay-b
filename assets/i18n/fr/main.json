@@ -1,3 +1,54 @@
 {
- "main" : ""
+ "main" : "",
+ "metas": {
+		"title": "Rodnay Paul",
+		"description": "MyStory",
+		"keywords": "",
+		"url": ""
+	},
+	"intro": {
+		"titleBase": "My",
+		"title": {
+			"url0": "",
+			"url1": "",
+			"url2": "",
+			"text": "Story"
+		},
+		"cta": "Swipe to discover"
+	},
+	"home": {
+		"slider": [
+			{
+				"title": "1993",
+				"url": "",
+				"text": "My Dad brought home the first Machintosh Classic II.",
+				"position": "left"
+			},
+			{
+				"title": "1996",
+				"url": "",
+				"text": "The \"1984\" frist Apple commercial caught my eye.",
+				"position": "middle"
+			},
+			{
+				"title": "2001",
+				"url": "",
+				"text": "Finaly I can dance in the street thanks to the frist Ipod generation.",
+				"position": "right"
+			},
+			{
+				"title": "2009",
+				"subtitle": "Onwards",
+				"url": "",
+				"text": "I've become a designer surronunded by the full Apple Family, from the iMac to the HomePod among others",
+				"position": "end1"
+			},
+			{
+				"title": "Next ?",
+				"url": "",
+				"text": "See you soon",
+				"position": "end2"
+			}
+		]
+	}
 }
