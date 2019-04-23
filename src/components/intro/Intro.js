@@ -21,10 +21,15 @@ class Intro extends React.Component {
     store.watch('swipe', this.handleSwipe);
   }
 
+  unbind = () => {
+    store.unwatch('swipe', this.handleSwipe);
+  }
+
   handleSwipe = () => {
-    store.set('start', 0) // launch rest of app
+    // check delta and if ::
+    this.unbind();
+    store.set('start', 0); // launch rest of app
     this.setState({ 'hidden': true })
-    // hide intro
   }
 
   allowSwipe = () => {

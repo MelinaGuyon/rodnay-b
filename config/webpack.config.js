@@ -74,6 +74,10 @@ const config = {
         ]
       },
       {
+        test: /\.modernizrrc$/,
+        loader: 'modernizr-loader!json-loader'
+      },
+      {
         test: /\.handlebars$/,
         loader: 'handlebars-loader'
       },
@@ -84,7 +88,10 @@ const config = {
     ].concat(current.rules)
   },
   resolve: {
-    modules: [PATHS.src, PATHS.assets, PATHS.nodeModules]
+    modules: [PATHS.src, PATHS.assets, PATHS.nodeModules],
+    alias: {
+      modernizr$: path.resolve(__dirname, '../.modernizrrc')
+    }
   },
   target: 'web',
   stats: 'errors-only',

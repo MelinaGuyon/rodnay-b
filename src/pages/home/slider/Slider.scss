@@ -1,5 +1,12 @@
+@import '~styles/Variables';
+
 .slider {
-  display: flex;
-  width: 500vw;
   height: 100%;
+
+  .slider-wrapper {
+    display: flex;
+    width: 500vw;
+    height: 100%;
+    transition: transform .6s $quad-ease-out;
+  }
 }

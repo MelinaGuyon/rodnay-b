@@ -1,0 +1,25 @@
+{
+  "classPrefix": "",
+	"minify" : true,
+  "options": [
+    "addTest",
+    "domPrefixes",
+    "hasEvent",
+    "load",
+    "mq",
+    "prefixed",
+    "prefixes",
+    "prefixedCSS",
+    "setClasses",
+    "testAllProps",
+    "testProp",
+    "testStyles"
+  ],
+  "feature-detects": [
+    "css/flexbox",
+    "css/pointerevents",
+    "css/backgroundblendmode",
+    "webgl",
+    "touchevents"
+  ]
+}
