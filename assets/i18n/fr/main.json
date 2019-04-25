@@ -32,20 +32,20 @@
 			},
 			{
 				"title": "2001",
-				"url": "./images/home/03.jpg",
+				"url": "./images/home/03.png",
 				"text": "Finaly I can dance in the street thanks to the frist Ipod generation.",
 				"position": "right"
 			},
 			{
 				"title": "2009",
 				"subtitle": "Onwards",
-				"url": "./images/home/01.jpg",
+				"url": "./images/home/04.jpg",
 				"text": "I've become a designer surronunded by the full Apple Family, from the iMac to the HomePod among others",
 				"position": "end1"
 			},
 			{
 				"title": "Next ?",
-				"url": "./images/home/01.jpg",
+				"url": "./images/home/04.jpg",
 				"text": "See you soon",
 				"position": "end2"
 			}

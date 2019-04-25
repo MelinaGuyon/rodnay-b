@@ -12,7 +12,7 @@ class SliderItem extends React.Component {
       <div className='slider-item'>
         <div className='container'>
           <div className='title'>{this.props.item.title}</div>
-          <img className='img' src={this.props.item.url} alt=""/>
+          <div className='img'><img src={this.props.item.url} alt=""/></div>
           <div className='text'>{this.props.item.text}</div>
         </div>
       </div>
