@@ -5,6 +5,7 @@ import i18n from 'abstract/i18n/i18n';
 import Router from 'abstract/router/Router';
 import Main from './tools/Main';
 import Resize from 'tools/resize';
+import Swipe from 'tools/swipe';
 import ReactApp from 'tools/reactApp';
 import Config from 'config/index';
 
@@ -17,6 +18,7 @@ window.onload = () => {
   const main = new Main(Config);
   main
     .use(Resize)
+    .use(Swipe)
     .use(i18n)
     .use(Router)
     .use(ReactApp)

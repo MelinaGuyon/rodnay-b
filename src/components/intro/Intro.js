@@ -19,8 +19,8 @@ class Intro extends React.Component {
   }
 
   componentDidMount () {
-    setTimeout(this.handleSwipe, 600);
-    // setTimeout(this.animate, 200);
+    // setTimeout(this.handleSwipe, 600); // passer vite
+    setTimeout(this.animate, 200);
   }
 
   bind = () => {
@@ -32,20 +32,20 @@ class Intro extends React.Component {
   }
 
   handleSwipe = () => {
-    // check delta and if ::
     this.unbind();
-    store.set('start', 0); // launch rest of app
-    this.setState({ 'hidden': true })
+    store.set('start', 0);
+    this.setState({ 'hidden': true });
   }
 
   allowSwipe = () => {
+    this.bind();
     this.setState({ 'swipe': true })
   }
 
   animate = () => {
     const tl = anime.timeline({
       easing: 'easeOutQuad',
-      duration: 500
+      duration: 400
     });
 
     const items = [...this.animation.current.querySelectorAll('.item')];
@@ -55,7 +55,7 @@ class Intro extends React.Component {
           targets: items[i],
           opacity: 1,
           translateY: [i === 0 ? 0 : -30, 0],
-          delay: 350,
+          delay: 250,
           complete: () => {
             if (i === this.state.titleNumber) return this.allowSwipe();
             anime({
@@ -63,8 +63,8 @@ class Intro extends React.Component {
               opacity: 0,
               translateY: [0, 30],
               easing: 'easeOutQuad',
-              duration: 500,
-              delay: 200
+              duration: 400,
+              delay: 100
             })
           }
         })

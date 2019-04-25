@@ -9,11 +9,10 @@ class SliderItem extends React.Component {
   img = React.createRef();
   text = React.createRef();
 
-  animateIn = () => {
-    console.log('je passe')
+  animateIn = (forward) => {
     anime({
       targets: this.title.current,
-      translateX: ['80vw', 0],
+      translateX: [forward ? '80vw' : '-80vw', 0],
       opacity: [0, 1],
       duration: 800,
       delay: 0,
@@ -22,7 +21,7 @@ class SliderItem extends React.Component {
 
     anime({
       targets: this.img.current,
-      translateX: ['80vw', 0],
+      translateX: [forward ? '80vw' : '-80vw', 0],
       opacity: [0, 1],
       duration: 800,
       delay: 250,
@@ -31,7 +30,7 @@ class SliderItem extends React.Component {
 
     anime({
       targets: this.text.current,
-      translateX: ['80vw', 0],
+      translateX: [forward ? '80vw' : '-80vw', 0],
       opacity: [0, 1],
       duration: 800,
       delay: 600,

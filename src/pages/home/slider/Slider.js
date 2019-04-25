@@ -17,6 +17,7 @@ class Slider extends React.Component {
   max = i18n.localize('home').slider.length - 1;
   numberItems = i18n.localize('home').slider.length;
   itemWidth = window.innerWidth
+  isSwipping = false;
 
   componentDidMount () {
     this.bind();
@@ -31,34 +32,37 @@ class Slider extends React.Component {
   }
 
   bindSwipe = () => {
-    // store.watch('swipe', this.handleSwipe);
-    document.addEventListener('click', this.handleSwipe)
+    store.watch('swipe', this.handleSwipe);
   }
 
   unbind = () => {
     store.unwatch('start', this.start);
-    // store.unwatch('swipe', this.handleSwipe);
-    document.removeEventListener('click', this.handleSwipe)
+    store.unwatch('swipe', this.handleSwipe);
   }
 
   start = () => {
     this.bindSwipe();
-    this.goTo(0, true);
+    this.goTo(0, { forward: true });
   }
 
   handleSwipe = () => {
-    // check delta etc
+    if (this.isSwipping) return;
+
+    const swipe = store.get('swipe');
     const prev = this.index;
-    this.index++;
+    if (swipe.forward) this.index++;
+    else this.index--;
     this.index = Math.max(this.min, (Math.min(this.max, this.index)));
 
     if (this.index === prev) return;
-    this.goTo(this.index, prev - this.index < 0)
+    this.goTo(this.index, { forward: swipe.forward })
   }
 
-  goTo = (index, dir) => {
-    this.items['item' + index].animateIn();
+  goTo = (index, forward) => {
+    this.isSwipping = true;
+    this.items['item' + index].animateIn(forward.forward);
     this.wrapper.current.style[Transform] = 'translateX(' + (-this.index * this.itemWidth) + 'px)'
+    setTimeout(() => { this.isSwipping = false; }, 1000);
   }
 
   renderSliderItem = (item, index) => {
