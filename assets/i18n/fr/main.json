@@ -9,9 +9,9 @@
 	"intro": {
 		"titleBase": "My",
 		"title": {
-			"url0": "",
-			"url1": "",
-			"url2": "",
+			"url0": "./images/home/01.jpg",
+			"url1": "./images/home/02.jpg",
+			"url2": "./images/home/03.png",
 			"text": "Story"
 		},
 		"cta": "Swipe to discover"
@@ -22,32 +22,37 @@
 				"title": "1993",
 				"url": "./images/home/01.jpg",
 				"text": "My Dad brought home the first Machintosh Classic II.",
-				"position": "left"
+				"titlePosition": "left",
+				"textPosition": "right"
 			},
 			{
 				"title": "1996",
 				"url": "./images/home/02.jpg",
 				"text": "The \"1984\" frist Apple commercial caught my eye.",
-				"position": "middle"
+				"titlePosition": "center",
+				"textPosition": "center"
 			},
 			{
 				"title": "2001",
 				"url": "./images/home/03.png",
 				"text": "Finaly I can dance in the street thanks to the frist Ipod generation.",
-				"position": "right"
+				"titlePosition": "right",
+				"textPosition": "left"
 			},
 			{
 				"title": "2009",
 				"subtitle": "Onwards",
 				"url": "./images/home/04.jpg",
 				"text": "I've become a designer surronunded by the full Apple Family, from the iMac to the HomePod among others",
-				"position": "end1"
+				"titlePosition": "left",
+				"textPosition": "full"
 			},
 			{
 				"title": "Next ?",
 				"url": "./images/home/04.jpg",
 				"text": "See you soon",
-				"position": "end2"
+				"titlePosition": "right",
+				"textPosition": "full"
 			}
 		]
 	}

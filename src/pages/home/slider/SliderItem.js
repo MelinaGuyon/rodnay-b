@@ -1,6 +1,4 @@
 import React from 'react';
-import i18n from 'abstract/i18n/i18n';
-import store from 'tools//store';
 
 require('./SliderItem.scss');
 
@@ -11,9 +9,9 @@ class SliderItem extends React.Component {
     return (
       <div className='slider-item'>
         <div className='container'>
-          <div className='title'>{this.props.item.title}</div>
+          <div className={'title ' + this.props.item.titlePosition}>{this.props.item.title}</div>
           <div className='img'><img src={this.props.item.url} alt=""/></div>
-          <div className='text'>{this.props.item.text}</div>
+          <div className={'text ' + this.props.item.textPosition}>{this.props.item.text}</div>
         </div>
       </div>
     )
