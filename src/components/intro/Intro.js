@@ -16,13 +16,11 @@ class Intro extends React.Component {
       hidden: false,
       titleNumber: Object.keys(i18n.localize('intro').title).length
     }
-
-    // setTimeout(this.handleSwipe, 600);
   }
 
   componentDidMount () {
-    // this.animate();
-    setTimeout(this.animate, 600);
+    setTimeout(this.handleSwipe, 600);
+    // setTimeout(this.animate, 200);
   }
 
   bind = () => {
@@ -41,7 +39,6 @@ class Intro extends React.Component {
   }
 
   allowSwipe = () => {
-    // allow swipe after all animations
     this.setState({ 'swipe': true })
   }
 
@@ -57,8 +54,8 @@ class Intro extends React.Component {
         .add({
           targets: items[i],
           opacity: 1,
-          translateY: [-30, 0],
-          delay: 400,
+          translateY: [i === 0 ? 0 : -30, 0],
+          delay: 350,
           complete: () => {
             if (i === this.state.titleNumber) return this.allowSwipe();
             anime({
@@ -81,7 +78,7 @@ class Intro extends React.Component {
     return (
       <div className={'intro ' + (hidden ? 'hidden' : '') } ref={this.component}>
         <div className='title'>
-          <span>{intro.titleBase}</span>
+          <span className='base' >{intro.titleBase}</span>
           <div className='animation' ref={this.animation}>
             <span className='item'>{intro.title.text}</span>
             <img className='item img' src="./images/home/01.jpg" alt=""/>

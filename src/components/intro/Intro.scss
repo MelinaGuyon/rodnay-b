@@ -38,11 +38,15 @@
 
         &:nth-child(1) {
           position: relative;
+          opacity: 1;
         }
       }
 
       .img {
+        padding-left: 6px;
+        width: 90px;
         height: 60px;
+        object-fit: contain;
       }
     }
   }

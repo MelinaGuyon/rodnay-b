@@ -27,7 +27,7 @@ class Slider extends React.Component {
   }
 
   bind = () => {
-    store.watch('start', this.bindSwipe);
+    store.watch('start', this.start);
   }
 
   bindSwipe = () => {
@@ -36,9 +36,14 @@ class Slider extends React.Component {
   }
 
   unbind = () => {
-    store.unwatch('start', this.bindSwipe);
+    store.unwatch('start', this.start);
     // store.unwatch('swipe', this.handleSwipe);
     document.removeEventListener('click', this.handleSwipe)
+  }
+
+  start = () => {
+    this.bindSwipe();
+    this.goTo(0, true);
   }
 
   handleSwipe = () => {
@@ -52,12 +57,13 @@ class Slider extends React.Component {
   }
 
   goTo = (index, dir) => {
+    this.items['item' + index].animateIn();
     this.wrapper.current.style[Transform] = 'translateX(' + (-this.index * this.itemWidth) + 'px)'
   }
 
-  renderSliderItem (item, index) {
+  renderSliderItem = (item, index) => {
     return [
-      <SliderItem item={item} key={index}></SliderItem>
+      <SliderItem item={item} key={index} ref={el => this.items['item' + index] = el}></SliderItem> //eslint-disable-line
     ]
   }
 
