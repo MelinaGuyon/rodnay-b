@@ -15,12 +15,10 @@ function Swipe () {
   }
 
   function touchstart (e) {
-    e.preventDefault();
     start = e.touches[0].clientX;
   }
 
   function touchend (e) {
-    e.preventDefault();
     end = e.changedTouches[0].clientX;
     const dist = Math.abs(end - start);
     if (dist > 50) {
