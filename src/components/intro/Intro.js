@@ -57,7 +57,7 @@ class Intro extends React.Component {
           translateY: [i === 0 ? 0 : -30, 0],
           delay: 250,
           complete: () => {
-            if (i === this.state.titleNumber) return this.allowSwipe();
+            if (i === this.state.titleNumber - 1) return this.allowSwipe();
             anime({
               targets: items[i],
               opacity: 0,
@@ -72,19 +72,21 @@ class Intro extends React.Component {
   }
 
   render () {
-    const { swipe, hidden } = this.state;
+    const { swipe, hidden, titleNumber } = this.state;
     const intro = i18n.localize('intro');
+
+    let imgs = [];
+    for (let i = 0; i < titleNumber; i++) {
+      imgs.push(
+        <img key={i} className='item img' src={intro.title['url' + i]} />
+      )
+    }
 
     return (
       <div className={'intro ' + (hidden ? 'hidden' : '') } ref={this.component}>
         <div className='title'>
-          <span className='base' >{intro.titleBase}</span>
           <div className='animation' ref={this.animation}>
-            <span className='item'>{intro.title.text}</span>
-            <img className='item img' src="./images/home/01.jpg" alt=""/>
-            <img className='item img' src="./images/home/02.jpg" alt=""/>
-            <img className='item img' src="./images/home/03.png" alt=""/>
-            <span className='item'>{intro.title.text}</span>
+            {imgs}
           </div>
         </div>
         <div className={'cta ' + (swipe ? 'active' : '') }>

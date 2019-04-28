@@ -21,10 +21,9 @@
     position: relative;
     margin-bottom: 10px;
     font-size: 40px;
+    color: $white;
     text-align: center;
-    background: -webkit-linear-gradient(0deg, #75b2db, #304d86);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 0 3px $red, -1px 0 0 $red, 0 1px 3px $red, 0 -1px 0 $red, 1px 1px $red, -1px -1px 0 $red, 1px -1px 0 $red, -1px 1px 0 $red;
 
     &.left {
       align-self: flex-start;
