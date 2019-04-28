@@ -4,6 +4,7 @@ import i18n from 'abstract/i18n/i18n';
 import map from 'lodash/map';
 import store from 'tools/store';
 import SliderItem from './SliderItem';
+import SliderBar from './SliderBar';
 
 require('./Slider.scss');
 
@@ -11,6 +12,7 @@ const Transform = Modernizr.prefixed('transform');
 
 class Slider extends React.Component {
   wrapper = React.createRef();
+  sliderBar = React.createRef();
   items = [];
   index = 0;
   min = 0;
@@ -61,6 +63,7 @@ class Slider extends React.Component {
   goTo = (index, forward) => {
     this.isSwipping = true;
     this.items['item' + index].animateIn(forward.forward);
+    this.sliderBar.current.setBarPosition(index);
     this.wrapper.current.style[Transform] = 'translateX(' + (-this.index * this.itemWidth) + 'px)'
     setTimeout(() => { this.isSwipping = false; }, 1000);
   }
@@ -79,6 +82,7 @@ class Slider extends React.Component {
         <div className='slider-wrapper' ref={this.wrapper}>
           {map(slider, this.renderSliderItem)}
         </div>
+        <SliderBar number={this.numberItems} ref={this.sliderBar}></SliderBar>
       </div>
     )
   }
