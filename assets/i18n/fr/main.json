@@ -6,8 +6,16 @@
 		"keywords": "",
 		"url": ""
 	},
+	"disclaimer": {
+		"text": "Hey. Check my story on your mobile !",
+		"textMobile": "Hey. Check my story on portrait mode !",
+		"img": "./images/home/mobile.svg"
+	},
+	"header": {
+		"url": "",
+		"img": "./images/home/04.svg"
+	},
 	"intro": {
-		"titleBase": "My",
 		"title": {
 			"url0": "./images/home/00.svg",
 			"url1": "./images/home/01.svg",

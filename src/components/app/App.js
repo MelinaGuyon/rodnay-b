@@ -4,6 +4,8 @@ import Router from 'abstract/router/Router';
 import PageManager from 'abstract/Page/PageManager';
 import PreLoader from 'abstract/PreLoader/PreLoader';
 import Intro from 'components/intro/Intro';
+import Header from 'components/header/Header';
+import Disclaimer from 'components/disclaimer/Disclaimer';
 
 require('./App.scss');
 
@@ -93,6 +95,7 @@ class App extends React.Component {
 
   render () {
     return [
+      <Header key='header'/>,
       <Intro key='intro'/>,
       <div className='app' ref='app' key='pages'>
         <div className='pages'>
@@ -100,6 +103,7 @@ class App extends React.Component {
           <PageManager ref='p1'/>
         </div>
       </div>,
+      <Disclaimer key='disclaimer'/>
     ];
   }
 }

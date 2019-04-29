@@ -1,12 +1,12 @@
 @import '~styles/Variables';
 
 .slider-bar {
-  position: absolute;
-  bottom: 50px;
+  position: fixed;
+  bottom: 30px;
   left: 50%;
   display: flex;
   width: 70%;
-  max-width: 250px;
+  max-width: 200px;
   height: 2px;
   opacity: 0;
   transform: translateX(-50%);
