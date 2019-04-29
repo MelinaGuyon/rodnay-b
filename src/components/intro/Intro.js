@@ -55,7 +55,7 @@ class Intro extends React.Component {
           targets: items[i],
           opacity: 1,
           translateY: [i === 0 ? 0 : -30, 0],
-          delay: 250,
+          delay: 300,
           complete: () => {
             if (i === this.state.titleNumber - 1) return this.allowSwipe();
             anime({
@@ -63,7 +63,7 @@ class Intro extends React.Component {
               opacity: 0,
               translateY: [0, 30],
               easing: 'easeOutQuad',
-              duration: 400,
+              duration: 500,
               delay: 100
             })
           }
