@@ -20,32 +20,32 @@
 	"home": {
 		"slider": [
 			{
-				"title": "1993",
+				"title": "2015",
 				"url": "./images/home/03.svg",
-				"text": "My Dad brought home the first Machintosh Classic II.",
+				"text": "I joined the community of travellers for my first trip in Copenhangen...",
 				"titlePosition": "left",
 				"textPosition": "right"
 			},
 			{
-				"title": "1996",
+				"title": "2016",
 				"url": "./images/home/01.svg",
-				"text": "The \"1984\" frist Apple commercial caught my eye.",
+				"text": "And got a good review for my first experience as an host.",
 				"titlePosition": "center",
 				"textPosition": "center"
 			},
 			{
-				"title": "2001",
+				"title": "2017",
 				"url": "./images/home/00.svg",
-				"text": "Finaly I can dance in the street thanks to the frist Ipod generation.",
+				"text": "I was thrilled by the campaign #WeAccept",
 				"titlePosition": "right",
 				"textPosition": "left"
 			},
 			{
 				"title": "Next ?",
 				"url": "./images/home/02.svg",
-				"text": "See you soon",
+				"text": "I hope to see you soon.",
 				"titlePosition": "right",
-				"textPosition": "full"
+				"textPosition": "left"
 			}
 		]
 	}
