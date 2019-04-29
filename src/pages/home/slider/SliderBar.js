@@ -19,6 +19,10 @@ class SliderItem extends React.Component {
     this.setWidth();
   }
 
+  animateIn () {
+    this.component.current.classList.add('visible');
+  }
+
   setWidth = () => {
     this.barWidth = this.component.current.offsetWidth / this.state.number;
     this.bar.current.style.width = `${this.barWidth}px`;

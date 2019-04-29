@@ -19,8 +19,8 @@ class Intro extends React.Component {
   }
 
   componentDidMount () {
-    setTimeout(this.handleSwipe, 600); // passer vite
-    // setTimeout(this.animate, 200);
+    // setTimeout(this.handleSwipe, 600); // passer vite
+    setTimeout(this.animate, 200);
   }
 
   bind = () => {

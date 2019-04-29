@@ -45,6 +45,7 @@ class Slider extends React.Component {
   start = () => {
     this.bindSwipe();
     this.goTo(0, { forward: true });
+    this.sliderBar.current.animateIn();
   }
 
   handleSwipe = () => {
