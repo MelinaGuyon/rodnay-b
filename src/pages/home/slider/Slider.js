@@ -72,7 +72,10 @@ class Slider extends React.Component {
   }
 
   resize = () => {
-    this.itemWidth = store.get('resize').width
+    const size = store.get('resize');
+    if (size.width > size.height) return;
+    if (this.itemWidth === size.width) return;
+    this.itemWidth = size.width
     this.goTo(this.index, { forward: true })
   }
 
