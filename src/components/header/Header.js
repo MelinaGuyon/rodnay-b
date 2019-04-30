@@ -8,13 +8,17 @@ require('./Header.scss');
 class Header extends React.Component {
   component = React.createRef();
 
+  onClick = () => {
+    window.location.href = '/';
+  }
+
   render () {
     const header = i18n.localize('header');
 
     return (
       <div className='header' ref={this.component}>
         <div className='info'><a href={header.url}>i</a></div>
-        <img className='img' src={header.img} />
+        <img className='img' onClick={this.onClick} src={header.img} />
       </div>
     );
   }

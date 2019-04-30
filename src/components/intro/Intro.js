@@ -1,7 +1,6 @@
 import React from 'react';
 import i18n from 'abstract/i18n/i18n';
 import store from 'tools//store';
-import anime from 'animejs';
 
 require('./Intro.scss');
 

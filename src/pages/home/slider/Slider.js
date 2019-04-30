@@ -31,6 +31,7 @@ class Slider extends React.Component {
 
   bind = () => {
     store.watch('start', this.start);
+    store.watch('resize', this.resize);
   }
 
   bindSwipe = () => {
@@ -40,6 +41,7 @@ class Slider extends React.Component {
   unbind = () => {
     store.unwatch('start', this.start);
     store.unwatch('swipe', this.handleSwipe);
+    store.unwatch('resize', this.resize);
   }
 
   start = () => {
@@ -67,6 +69,11 @@ class Slider extends React.Component {
     this.sliderBar.current.setBarPosition(index);
     this.wrapper.current.style[Transform] = 'translateX(' + (-this.index * this.itemWidth) + 'px)'
     setTimeout(() => { this.isSwipping = false; }, 1000);
+  }
+
+  resize = () => {
+    this.itemWidth = store.get('resize').width
+    this.goTo(this.index, { forward: true })
   }
 
   renderSliderItem = (item, index) => {
