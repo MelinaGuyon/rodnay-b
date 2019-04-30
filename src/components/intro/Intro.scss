@@ -36,10 +36,24 @@
       .item {
         position: absolute;
         opacity: 0;
+        pointer-events: none;
+        transform: translateY(-30px);
+        transition: opacity .4s $quad-ease-out, transform .4s $quad-ease-out;
 
         &:nth-child(1) {
           position: relative;
           opacity: 1;
+          transform: translateY(0);
+        }
+
+        &.visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        &.hidden {
+          opacity: 0;
+          transform: translateY(30px);
         }
       }
 

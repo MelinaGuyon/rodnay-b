@@ -12,7 +12,7 @@
 		"img": "./images/home/mobile.svg"
 	},
 	"header": {
-		"url": "",
+		"url": "mailto:hi.palrdy@gmail.com",
 		"img": "./images/home/04.svg"
 	},
 	"intro": {
@@ -37,7 +37,7 @@
 			{
 				"title": "2016",
 				"url": "./images/home/01.svg",
-				"text": "And got a good review for my first experience as an host.",
+				"text": "And I had a good review for my first experience as an host.",
 				"titlePosition": "center",
 				"textPosition": "center"
 			},

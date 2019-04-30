@@ -12,7 +12,7 @@ class Disclaimer extends React.Component {
     super();
     this.state = {
       show: config.desktop,
-      text: config.mobile ? i18n.localize('disclaimer').textMobile : i18n.localize('disclaimer').text
+      text: !config.desktop ? i18n.localize('disclaimer').textMobile : i18n.localize('disclaimer').text
     }
   }
 

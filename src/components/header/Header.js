@@ -13,7 +13,7 @@ class Header extends React.Component {
 
     return (
       <div className='header' ref={this.component}>
-        <div className='info'>i</div>
+        <div className='info'><a href={header.url}>i</a></div>
         <img className='img' src={header.img} />
       </div>
     );

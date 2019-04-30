@@ -21,6 +21,11 @@
     font-size: 12px;
     color: $red;
     transform: translateY(-55%);
+
+    a {
+      color: $red;
+      text-decoration: none;
+    }
   }
 
   .img {

@@ -43,31 +43,16 @@ class Intro extends React.Component {
   }
 
   animate = () => {
-    const tl = anime.timeline({
-      easing: 'easeOutQuad',
-      duration: 400
-    });
-
     const items = [...this.animation.current.querySelectorAll('.item')];
+
     for (let i = 0; i < items.length; i++) {
-      tl
-        .add({
-          targets: items[i],
-          opacity: 1,
-          translateY: [i === 0 ? 0 : -30, 0],
-          delay: 300,
-          complete: () => {
-            if (i === this.state.titleNumber - 1) return this.allowSwipe();
-            anime({
-              targets: items[i],
-              opacity: 0,
-              translateY: [0, 30],
-              easing: 'easeOutQuad',
-              duration: 500,
-              delay: 100
-            })
-          }
-        })
+      setTimeout(() => {
+        items[i].classList.add('visible');
+        setTimeout(() => {
+          if (i < items.length - 1) items[i].classList.add('hidden');
+          else this.allowSwipe();
+        }, 400)
+      }, i * 600)
     }
   }
 
